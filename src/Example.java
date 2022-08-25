@@ -34,7 +34,7 @@ public class Example {
     public static void main(String[] args) {
         Example ex = new Example();
         String username="root";
-        String password = "pwd12345"; //TODO: change value to "pwd12345" for taking access
+        String password = "pwd12346"; //TODO: change value to "pwd12345" for taking access
         try (Scanner sc = new Scanner(System.in);){
             ex.auth(username,password);
             System.out.print("Enter the year of your birth: ");
