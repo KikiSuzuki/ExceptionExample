@@ -34,22 +34,19 @@ public class Example {
     public static void main(String[] args) {
         Example ex = new Example();
         String username="root";
-        String password = "pwd12347"; //TODO: change value to "pwd12345" for taking access
-        while (true){
-            try (Scanner sc = new Scanner(System.in);){
-                ex.auth(username,password);
-                System.out.print("Enter the year of your birth: ");
-                int year = Integer.parseInt(sc.nextLine());
-                ex.isYearOfBirthCorrect(year);
-                System.out.print("Year is OK");
-            }catch (InvalidCredentialsException exception){
-                System.out.println("You have an exception: "+ exception);
-            } catch (NumberFormatException nfe) {
-                System.out.print("Try again: ");
-            } catch (IllegalYearOfBirthException e) {
-                System.out.print("You are too young: " + e);
-            }
+        String password = "pwd12345"; //TODO: change value to "pwd12345" for taking access
+        try (Scanner sc = new Scanner(System.in);){
+            ex.auth(username,password);
+            System.out.print("Enter the year of your birth: ");
+            int year = Integer.parseInt(sc.nextLine());
+            ex.isYearOfBirthCorrect(year);
+            System.out.print("Year is OK");
+        }catch (InvalidCredentialsException exception){ //self-defined Checked Exception
+            System.out.println("You have an exception: "+ exception);
+        } catch (NumberFormatException nfe) {
+            System.out.print("Is not a number: "+ nfe);
+        } catch (IllegalYearOfBirthException e) { //self-defined Unchecked Exception
+            System.out.print("You are too young: " + e);
         }
     }
-
 }
