@@ -21,7 +21,7 @@ public class JGitTest {
         git.push()
                 //.setRemote("https://github.com/KikiSuzuki/ExceptionExample.git")
                 .setCredentialsProvider(
-                        new UsernamePasswordCredentialsProvider("KikiSuzuki", "Reita2904")
+                        new UsernamePasswordCredentialsProvider("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", "")
                         )
                         .call();
     }
