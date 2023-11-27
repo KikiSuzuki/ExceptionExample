@@ -20,9 +20,9 @@ public class JGitTest {
         System.out.println("remote adding");
         git.push()
                 //.setRemote("https://github.com/KikiSuzuki/ExceptionExample.git")
-//                .setCredentialsProvider(
-//                        new UsernamePasswordCredentialsProvider("KikiSuzuki", "Reita2904")
-//                        )
+                .setCredentialsProvider(
+                        new UsernamePasswordCredentialsProvider("KikiSuzuki", "Reita2904")
+                        )
                         .call();
     }
 }
