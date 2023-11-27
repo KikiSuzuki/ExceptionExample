@@ -9,7 +9,6 @@ public class JGitTest {
     public static void main(String[] args) throws GitAPIException, IOException {
         System.out.println("adding");
         Git git = Git.open(new File(".git"));
-
         git.add()
                 .addFilepattern("resultsFile.html")
                 .call();
@@ -22,7 +21,7 @@ public class JGitTest {
         git.push()
                 .setRemote("https://github.com/KikiSuzuki/ExceptionExample.git")
                 .setCredentialsProvider(
-                        new UsernamePasswordCredentialsProvider("skultrix", "")
+                        new UsernamePasswordCredentialsProvider("KikiSuzuki", "Reita2904")
                         )
                         .call();
     }
